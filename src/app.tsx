@@ -13,7 +13,7 @@ export default function App() {
   const [defaultUrl] = keys
   const defaultRoute = `/${defaultUrl}`
   const notFoundRoute = `/${NOT_FOUND_KEY}`
-  const PUBLIC_URL = '.'
+  const { PUBLIC_URL } = process.env
 
   return (
     <div className='container'>
