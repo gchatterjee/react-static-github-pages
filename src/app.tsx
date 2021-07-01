@@ -13,7 +13,7 @@ export default function App() {
   const [defaultUrl] = keys
   const defaultRoute = `/${defaultUrl}`
   const notFoundRoute = `/${NOT_FOUND_KEY}`
-  const { PUBLIC_URL } = process.env
+  const PUBLIC_URL = '/react-static-github-pages'
 
   return (
     <div className='container'>
@@ -35,6 +35,5 @@ export default function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
-  )
+    </  )
 }
