@@ -3,4 +3,7 @@
 set -e
 
 npm run lint
-npm run build && git add docs/index.js || exit 0
+npm run build && \
+git add docs/index.js && \
+echo "built artifacts, committing index.js" || \
+exit 0
