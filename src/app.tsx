@@ -9,17 +9,16 @@ import View from './components/view/view'
 import { PAGE_KEYS, NOT_FOUND_KEY } from './app.constant'
 
 export default function App() {
-  const keys = Object.keys(PAGE_KEYS)
-  const [defaultUrl] = keys
-  const defaultRoute = `/${defaultUrl}`
+  const [defaultUrl] = PAGE_KEYS
+  const defaultRoute = `/${defaultUrl || NOT_FOUND_KEY}`
   const notFoundRoute = `/${NOT_FOUND_KEY}`
-  const PUBLIC_URL = '/react-static-github-pages'
+  const PUBLIC_URL = '/react-static-github-pages' // change this to your repo name
 
   return (
     <div className='container'>
       <Router basename={PUBLIC_URL}>
         <Switch>
-          {keys.map(key => (
+          {PAGE_KEYS.map(key => (
             <Route key={key} path={`/${key}`}>
               <View pageKey={key} />
             </Route>
