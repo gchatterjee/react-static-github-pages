@@ -4,9 +4,11 @@
   "description": "a template for static GitHub Pages in React",
   "main": "docs/index.js",
   "scripts": {
-    "lint": "prettier --check . && eslint './**/*.{ts}'",
-    "lint:fix": "prettier --write . && eslint --fix './**/*.{ts,tsx}'",
-    "build": "webpack --mode=development"
+    "lint": "prettier --check . && eslint '**/*.{ts,tsx}'",
+    "lint:fix": "prettier --write . && eslint --fix '**/*.{ts,tsx}'",
+    "test": "echo 'set up some tests!'",
+    "build": "webpack --mode=development",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.0",
     "prettier": "^2.3.2",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.4",
