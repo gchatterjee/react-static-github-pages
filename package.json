@@ -8,6 +8,7 @@
     "lint:fix": "prettier --write . && eslint --fix '**/*.{ts,tsx}'",
     "test": "echo 'set up some tests!'",
     "build": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
     "prepare": "husky install"
   },
   "repository": {
